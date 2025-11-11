@@ -9,13 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var messageString = ""
+    @State private var messageString = "When the Genius Bar Needs Help, They Call You!"
     
     var body: some View {
-        
-        
-        // COntents
         VStack {
+            Text("Awesome!")
+                .font(.largeTitle)
+                .fontWeight(.black)
+                .foregroundStyle(.white)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(.indigo)
+
             
             Spacer()
             
@@ -28,7 +33,6 @@ struct ContentView: View {
                 .padding()
                 .frame(height: 150)
                 .frame(maxWidth: .infinity)
-            //                .border(.orange)
                 .padding()
             
             Spacer()
@@ -46,6 +50,9 @@ struct ContentView: View {
             }
             .buttonStyle(.borderedProminent)
             .padding()
+            Rectangle()
+                .frame(height: 0)
+                .background(.indigo)
         }
     }
 }
